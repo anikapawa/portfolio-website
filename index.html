@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anika's Portfolio</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f0f4f8;
+      background-color: #f5f7fb;
       color: #333;
     }
 
@@ -16,31 +17,38 @@
       background-color: #2c3e50;
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 45px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.6em;
     }
 
     header p {
-      margin: 10px 0 0 0;
-      font-size: 1.2em;
+      margin-top: 10px;
+      font-size: 1.1em;
+      opacity: 0.9;
     }
 
     main {
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     section.project {
       background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    section.project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     }
 
     section.project h2 {
@@ -49,68 +57,129 @@
     }
 
     section.project p {
-      margin: 5px 0;
+      line-height: 1.5;
     }
 
     a {
+      display: inline-block;
+      margin-top: 8px;
       color: #2980b9;
       text-decoration: none;
+      font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
+    .tag {
+      display: inline-block;
+      background: #eef3f8;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      margin-bottom: 8px;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background-color: #ecf0f1;
       margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Anika Pawa's Portfolio</h1>
-  <p>View my coding projects below.</p>
+  <p>Software Engineering • AI • Data Science Projects</p>
 </header>
 
 <main>
+
+  <!-- PWC Library -->
   <section class="project">
+    <span class="tag">Full-Stack Web App</span>
+    <h2>PWC Library (Penn Women’s Center Library Platform)</h2>
+    <p>
+      A full-stack web application built for managing a digital library and book club experience.
+      Users can browse books, view curated collections, and request checkouts or holds.
+      Admins can manage book selections, track RSVPs, and send email notifications.
+    </p>
+    <a href="https://github.com/anikapawa/pwc-library" target="_blank">View on GitHub</a>
+  </section>
+
+  <!-- Movie Recommender -->
+  <section class="project">
+    <span class="tag">Machine Learning</span>
+    <h2>Movie Recommender System</h2>
+    <p>
+      A Python-based recommendation system using user-based collaborative filtering.
+      It generates personalized movie suggestions based on user genre preferences and past ratings.
+    </p>
+    <a href="https://github.com/anikapawa/movie-recommender" target="_blank">View on GitHub</a>
+  </section>
+
+  <!-- Breast Cancer -->
+  <section class="project">
+    <span class="tag">Healthcare AI</span>
     <h2>Predictive Modeling for Breast Cancer Patient Data</h2>
-    <p><strong>Description:</strong> This slideshow showcases four ML models that were develped and evaluated (Random Forest, 
-             XGBoost, Logistic Regression, SVM) to predict breast cancer outcomes in patients.</p>
-    <a href="https://drive.google.com/file/d/1L-gg31kxfmbYBdURdFLQkQ1V3Uvk-db0/view" target="_blank">View Slideshow</a>
+    <p>
+      This project explores multiple machine learning models (Random Forest, XGBoost,
+      Logistic Regression, and SVM) to predict breast cancer outcomes using patient data.
+    </p>
+    <a href="https://drive.google.com/file/d/1L-gg31kxfmbYBdURdFLQkQ1V3Uvk-db0/view" target="_blank">
+      View Slideshow
+    </a>
   </section>
-  
+
+  <!-- 2048 -->
   <section class="project">
+    <span class="tag">Game Development</span>
+    <h2>2048 Game</h2>
+    <p>
+      A fully implemented version of the 2048 puzzle game featuring grid logic, tile merging,
+      undo functionality, and persistent game state using file storage.
+    </p>
+    <a href="https://github.com/anikapawa/2048-game" target="_blank">View on GitHub</a>
+  </section>
+
+  <!-- Paint -->
+  <section class="project">
+    <span class="tag">OCaml / GUI Systems</span>
+    <h2>Paint Application</h2>
+    <p>
+      A functional paint program built in OCaml featuring a custom GUI toolkit.
+      Supports drawing lines, points, ellipses, color selection, and line thickness control
+      through interactive widgets like sliders and checkboxes.
+    </p>
+    <a href="https://github.com/anikapawa/paint-application" target="_blank">View on GitHub</a>
+  </section>
+
+  <!-- Digital Planner -->
+  <section class="project">
+    <span class="tag">Productivity App</span>
     <h2>Digital Planner</h2>
-    <p><strong>Description:</strong> This program creates a Python Tkinter app that helps students stay organized. Features include a 
-             calendar, course tracker, to-do list, and journal, all in one interactive program to efficiently manage tasks and 
-             deadlines. To try it, download the full portfolio ZIP from GitHub, navigate to the <code>digital_planner</code> folder, 
-             and open the <code>README.md</code> for instructions.</p>
-    <a href="https://github.com/anikapawa/github_portfolio/archive/refs/heads/main.zip" target="_blank">Download Project</a>
+    <p>
+      A Python Tkinter-based productivity tool that combines a calendar, course tracker,
+      to-do list, and journal into a single interface for managing student workflows.
+    </p>
+    <a href="https://github.com/anikapawa/digital-planner" target="_blank">View on GitHub</a>
   </section>
 
+  <!-- Habit Tracker -->
   <section class="project">
-    <h2>Movie Recommender</h2>
-    <p><strong>Description:</strong> This program implements a movie recommendation system using user-based
-             collaborative filtering, generating personalized movie suggestions based on the similarity of users' genre preferences and past 
-             ratings. To try it, download the full portfolio ZIP from GitHub, navigate to the <code>movie_recommender</code> folder, and 
-             open the <code>README.md</code> for instructions. A video of the running program is also included in the readme file, as the 
-             project was built in the Codio environment.</p>
-    <a href="https://github.com/anikapawa/github_portfolio/archive/refs/heads/main.zip" target="_blank">Download Project</a></p>
+    <span class="tag">Web App</span>
+    <h2>Habit Tracker</h2>
+    <p>
+      A web-based habit tracking application that allows users to log daily habits,
+      maintain streaks, and track progress over time with persistent storage.
+    </p>
+    <a href="https://github.com/anikapawa/habit-tracker" target="_blank">View on GitHub</a>
   </section>
 
-  <section class="project">
-  <h2>Habit Tracker</h2>
-  <p><strong>Description:</strong> This program is a simple web application that allows users to track daily habits and monitor streaks for 
-             consecutive days. Users can add habits, mark them as done for the day, and see streaks persist across sessions. 
-             To try it, download the full portfolio ZIP from GitHub, navigate to the <code>habit_tracker</code> folder, 
-             and open the <code>README.md</code> for instructions.</p>
-  <a href="https://github.com/anikapawa/github_portfolio/archive/refs/heads/main.zip" target="_blank">Download Project</a>
-</section>
 </main>
 
 <footer>
